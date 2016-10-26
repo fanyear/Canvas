@@ -1,5 +1,5 @@
-var WINDOW_WIDTH = 1400;
-var WINDOW_HEIGHT = 700;
+var WINDOW_WIDTH ;
+var WINDOW_HEIGHT ;
 var RADIUS = 9;
 var MARGIN_LEFT = 100;
 var MARGIN_TOP = 300;
@@ -13,6 +13,13 @@ var colors = ["#FF6666", "#FFFF00", "#666699", "#FF9933", "#CCCC33", "#CC99CC", 
 
 window.onload = function() {
     var canvas = document.getElementById("canvas");
+
+    WINDOW_WIDTH = document.body.clientWidth;
+    WINDOW_HEIGHT = document.body.clientHeight;
+
+    console.log(WINDOW_HEIGHT);
+
+
     canvas.width = WINDOW_WIDTH;
     canvas.height = WINDOW_HEIGHT;
 
@@ -100,7 +107,18 @@ function updateBalls() {
 
         if (balls[i].y >= WINDOW_HEIGHT - RADIUS) {
             balls[i].y = WINDOW_HEIGHT - RADIUS;
-            balls[i].vy = -balls[i].vy * 0.5;
+            balls[i].vy = -balls[i].vy * Math.random()*0.7;
+        }
+
+        var cnt =0;
+        for(var j=0;j<balls.length;j++){
+          if(balls[j].x + RADIUS >0 && balls[j].x-RADIUS <WINDOW_WIDTH ){
+            balls[cnt++] = balls[j];
+          }
+        }
+
+        while (balls.length > Math.min(400,cnt)) {
+            balls.pop();
         }
     }
 }
