@@ -17,6 +17,12 @@ window.onload = function() {
     WINDOW_WIDTH = document.body.clientWidth;
     WINDOW_HEIGHT = document.body.clientHeight;
 
+    MARGIN_LEFT = Math.round(WINDOW_WIDTH/10);
+    MARGIN_TOP_LEFT = MARGIN_LEFT;
+    RADIUS = Math.round(WINDOW_WIDTH*4/5/120)-1;
+    MARGIN_TOP = Math.round(WINDOW_HEIGHT/2.5);
+    MARGIN_TOP_TOP = MARGIN_TOP - 26*RADIUS;
+
     console.log(WINDOW_HEIGHT);
 
 
