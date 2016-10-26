@@ -21,7 +21,7 @@ window.onload = function() {
     MARGIN_TOP_LEFT = MARGIN_LEFT;
     RADIUS = Math.round(WINDOW_WIDTH*4/5/120)-1;
     MARGIN_TOP = Math.round(WINDOW_HEIGHT/2.5);
-    MARGIN_TOP_TOP = MARGIN_TOP - 26*RADIUS;
+    MARGIN_TOP_TOP = MARGIN_TOP - 24*RADIUS -WINDOW_HEIGHT/20;
 
     console.log(WINDOW_HEIGHT);
 
