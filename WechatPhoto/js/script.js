@@ -31,7 +31,7 @@ var clippingRegion = {
 };
 
 var image = new Image();
-image.src = "js/img.jpg";
+image.src = "js/img1.jpg";
 image.onload = function() {
 
 
