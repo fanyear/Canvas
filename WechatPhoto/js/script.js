@@ -8,24 +8,22 @@ var resetButton = document.getElementById("reset");
 var showButton = document.getElementById("show");
 
 
-
 var div = document.getElementById("blur-div");
-div.style.width = canvas.width +"px";
-div.style.height = canvas.height +"px";
+div.style.width =canvasWidth +"px";
+div.style.height = canvasHeight+"px";
 
 var img = document.getElementById("blur-image");
 img.style.width = img.width+"px";
 img.style.height = img.height+"px";
 
-var leftMargin = parseInt((img.width - canvas.width)/2);
-var topMargin = parseInt((img.height - canvas.height)/2);
+var leftMargin = parseInt((img.width - canvasWidth)/2);
+var topMargin = parseInt((img.height - canvasHeight)/2);
 img.style.left = String(-leftMargin)+"px";
 console.log(leftMargin);
 img.style.top = String(-topMargin)+"px";
 
 canvas.height = canvasHeight;
 canvas.width = canvasWidth;
-
 var clippingRegion = {
     x: 200,
     y: 300,
