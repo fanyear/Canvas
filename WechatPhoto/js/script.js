@@ -8,8 +8,7 @@ var resetButton = document.getElementById("reset");
 var showButton = document.getElementById("show");
 
 
-canvas.height = canvasHeight;
-canvas.width = canvasWidth;
+
 var div = document.getElementById("blur-div");
 div.style.width = canvas.width +"px";
 div.style.height = canvas.height +"px";
@@ -24,6 +23,9 @@ img.style.left = String(-leftMargin)+"px";
 console.log(leftMargin);
 img.style.top = String(-topMargin)+"px";
 
+canvas.height = canvasHeight;
+canvas.width = canvasWidth;
+
 var clippingRegion = {
     x: 200,
     y: 300,
@@ -35,7 +37,7 @@ image.src = "js/img.jpg";
 image.onload = function() {
 
 
-    initCancas(clippingRegion);
+    initCancas();
 }
 
 function initCancas() {
