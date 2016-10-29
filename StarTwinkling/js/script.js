@@ -9,9 +9,10 @@ canvas.width = CANVASWIDTH;
 canvas.height = CANVASHEIGHT;
 
 var img = new Image();
-img.src = "img.jpg";
+img.src = "img.JPG";
 var starImg = new Image();
 starImg.src = "img/star.png";
+
 var num = 60;
 var stars = [];
 
